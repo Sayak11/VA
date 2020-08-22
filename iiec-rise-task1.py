@@ -103,13 +103,7 @@ if __name__ == "__main__":
         elif 'open' and 'google chrome' in query :
            speak("Opening google chrome")
            subprocess.Popen('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome')
-
-           
-        elif 'Notepad'  in query :
-            speak("Opening notepad")
-            subprocess.Popen('C:\\WINDOWS\\system32\\notepad')
-
-        
+      
             
         elif 'date' in query :
             date()
@@ -136,12 +130,7 @@ if __name__ == "__main__":
             search=takeCommand().lower()
             wb.register('chrome', None,wb.BackgroundBrowser(chromepath))
             wb.get('chrome').open_new_tab(search+'.com')
-        elif 'logout' in query :
-            os.system("shutdown -l")
-        elif 'shutdown' in query :
-            os.system("shutdown /s /t l")
-        elif 'restart' in query :
-            os.system("shutdown /r /t l")
+        
         elif  'remember' in query:
             speak("What should I remember ?")
             data=takeCommand()
